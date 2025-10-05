@@ -1,0 +1,61 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2B2B2B;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+button {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+}
+
+input {
+   font-family: inherit;
+   color: inherit; 
+}
+
+input::placeholder {
+   font-family: inherit;
+   color: inherit; 
+}
+
+.container {
+    max-width: 1740px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.section-box {
+    padding: 150px 0;
+}
+
+.section__title {
+    margin-bottom: 55px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 1.16;
+}
+
