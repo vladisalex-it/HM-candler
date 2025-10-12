@@ -157,6 +157,7 @@ input::placeholder {
 /* top */
 .main {
     background-color: #FFF8F3;
+    overflow-x: clip;
 }
 
 .top {
@@ -171,7 +172,6 @@ input::placeholder {
 .top__content {
     width: 380px;
     padding: 150px 0 250px;
-
 }
 
 .top__title {
@@ -188,13 +188,11 @@ input::placeholder {
 
 .top__buy {
     display: inline-block;
-    padding: 18px 18px;
-    max-width: 150px;
-    width: 100%;
-    height: 55px;
+    padding: 20px 46px;
     font-family: "Comfortaa-Regular", sans-serif;
     font-size: 14px;
     font-weight: 600;
+    line-height: 1.4;
     text-align: center;
     background-color: #FFBD59;
 }
@@ -203,6 +201,10 @@ input::placeholder {
     position: absolute;
     top: 0;
     left: 240px;
+}
+
+.top__img-l {
+    max-width: none;
 }
 
 
@@ -249,6 +251,22 @@ input::placeholder {
     .container {
         padding: 0 20px;
     }
+    .top__content {
+        width: 333px;
+        padding: 95px 0 70px;
+    }
+    .top__text {
+        margin-bottom: 30px;
+    }
+    .top__img {
+        left: 300px;
+    }
+    .top__img-l {
+        width: 655px;
+    }
+    .top__text {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -287,6 +305,23 @@ input::placeholder {
         height: 14px;
         left: -16px;
         top: -2px;
+    }
+    .top__content {
+        width: 236px;
+    }
+    .top__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .top__text {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    .top__buy {
+        padding: 15px 30px;
+    }
+    .top__img {
+        left: 180px;
     }
 }
 
@@ -350,6 +385,121 @@ input::placeholder {
         flex-direction: column;
         gap: 22px 0;
     }
+    
 
+
+}
+
+@media (max-width: 480px) {
+    .top {
+        padding: 30px 0 50px;
+    }
+    .top__content {
+        width: 180px;
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    .top__title {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .top__text {
+        font-size: 8px;
+        margin-bottom: 15px;
+    }
+    .top__buy {
+        padding: 14px 41px;
+        font-size: 10px;
+    }
+    .top__img {
+        left: 120px;
+    }
+    .top__img-l {
+        width: 309px;
+    }
+}
+
+@media (max-width: 360px) {
+    .top__content {
+        width: 200px;
+        padding: 20px 0 0 0;
+        position: relative;
+        z-index: 2;
+    }
+    .top__title {
+        font-size: 18px;
+    }
+    .top__img {
+        left: 180px;
+    }
+    .top__img-l {
+        width: 185px;
+        position: relative;
+        z-index: 1;
+    }
+    .top__text {
+        font-size: 10px;
+    }
+}
+
+/* about */
+.about {
+    padding: 50px 0 108px;
+    background-color: #A5978E;
+    color: #FAFAFA;
+    font-weight: 400;
+}
+.container-about {
+    position: relative;
+}
+.about__inner {
+    display: flex;
+    gap: 20px;
+}
+.about__textbox {
+    width: 371px;
+    padding: 78px 0;
+}
+.about__title {
+    font-family: 'YesevaOne-Regular', cursive;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.about__text {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.about__content {
+    position: absolute;
+    left: 370px;
+}
+.about__content-text {
+    font-size: 11px;
+}
+.about__content-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding-bottom: 48px;
+    padding-left: 90px;
+}
+.about__content-img {
+    max-width: none;
+}
+.about__content-text {
+    padding-top: 10px;
+}
+.about__content-decoration {
+    display: flex;
+    align-items: center;
+}
+.about__content-decoration img {
+    margin-top: -10px;
+}
+.line {
+    flex-grow: 1; /* Полоса занимает оставшееся пространство */
+    height: 1px; /* Высота линии */
+    background-color: #7B6152; /* Цвет линии */
 
 }
