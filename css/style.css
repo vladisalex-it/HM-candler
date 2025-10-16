@@ -207,7 +207,114 @@ input::placeholder {
     max-width: none;
 }
 
+/* about */
+.about {
+    background-color: #A5978E;
+    padding: 50px 0;
+    color: #FAFAFA;
+}
 
+.about__inner {
+    display: flex;
+    align-items: center;
+}
+
+.about__content {
+    min-width: 370px;
+}
+
+.about__title {
+    margin-bottom: 15px;
+    font-family: 'YesevaOne-Regular', cursive;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.about__text {
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.about__list {
+    display: flex;
+    align-items: center;
+    flex-basis: 930px;
+    column-gap: 20px;
+    padding-left: 110px;
+    padding-bottom: 48px;
+    position: relative;
+}
+
+.about__list::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 22px;
+    height: 30px;
+    background-image: url(../images/about-icon.png);
+}
+
+.about__list::after {
+    content: '';
+    position: absolute;
+    bottom: 13px;
+    left: 22px;
+    width: 1000%;
+    height: 1px;
+    background-color: #7B6152;
+}
+
+.about__item {}
+
+.about__item-img {
+    margin-bottom: 10px;
+    max-width: none;
+}
+
+.about__item-text {
+    font-size: 11px;
+}
+
+/* product */
+
+.product {
+    padding: 150px 0 160px;
+}
+
+.product__inner {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.product__content {
+    flex-basis: 372px;
+}
+
+.product__items-wrapper {
+    max-width: 790px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 20px;
+    box-sizing: content-box;
+}
+
+.product__item {
+    max-width: 50%;
+    width: 290px;
+    text-align: center;
+    padding: 0 47px;
+}
+
+.product__img {
+    display: inline-block;
+}
+
+.product__price {
+    display: block;
+}
 
 
 /* footer */
@@ -251,21 +358,35 @@ input::placeholder {
     .container {
         padding: 0 20px;
     }
+
     .top__content {
         width: 333px;
         padding: 95px 0 70px;
     }
+
     .top__text {
         margin-bottom: 30px;
     }
+
     .top__img {
         left: 300px;
     }
+
     .top__img-l {
         width: 655px;
     }
+
     .top__text {
         margin-bottom: 30px;
+    }
+
+    .about__content {
+        min-width: 300px;
+    }
+
+    .about__list {
+        padding-left: 20px;
+        column-gap: 15px;
     }
 }
 
@@ -306,22 +427,65 @@ input::placeholder {
         left: -16px;
         top: -2px;
     }
+
     .top__content {
         width: 236px;
     }
+
     .top__title {
         font-size: 20px;
         margin-bottom: 20px;
     }
+
     .top__text {
-        font-size: 10px;
         margin-bottom: 20px;
     }
+
     .top__buy {
         padding: 15px 30px;
     }
+
     .top__img {
         left: 180px;
+    }
+
+    .about__content {
+        min-width: 200px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    .about__list {
+        margin-left: 12px;
+        padding-bottom: 33px;
+        column-gap: 10px;
+    }
+
+    .about__title {
+        margin-bottom: 20px;
+    }
+
+    .about__text {
+        font-size: 10px;
+    }
+
+    .about__item-text {
+        font-size: 6px;
+    }
+
+    .about__item-img {
+        margin-bottom: 6px;
+    }
+
+    .about__item-img--1,
+    .about__item-img--3 {
+        width: 120px;
+    }
+
+    .about__item-img--2 {
+        width: 190px;
     }
 }
 
@@ -385,7 +549,7 @@ input::placeholder {
         flex-direction: column;
         gap: 22px 0;
     }
-    
+
 
 
 }
@@ -394,112 +558,109 @@ input::placeholder {
     .top {
         padding: 30px 0 50px;
     }
+
     .top__content {
         width: 180px;
         padding-top: 80px;
         padding-bottom: 100px;
     }
+
     .top__title {
         font-size: 15px;
         margin-bottom: 15px;
     }
+
     .top__text {
         font-size: 8px;
         margin-bottom: 15px;
     }
+
     .top__buy {
         padding: 14px 41px;
         font-size: 10px;
     }
+
     .top__img {
         left: 120px;
     }
+
     .top__img-l {
         width: 309px;
+    }
+
+    .about__inner {
+        align-items: flex-end;
+    }
+
+    .about__content {
+        min-width: 172px;
+    }
+
+    .about__list {
+        margin-left: 0;
+        padding-left: 10px;
+        column-gap: 5px;
+        align-items: flex-end;
+    }
+
+    .about__item-img--1,
+    .about__item-img--3 {
+        width: 80px;
+    }
+
+    .about__item-img--2 {
+        width: 140px;
+    }
+
+    .about__item-text {
+        display: none;
     }
 }
 
 @media (max-width: 360px) {
+    body {
+        font-size: 8px;
+    }
+
     .top__content {
         width: 200px;
         padding: 20px 0 0 0;
         position: relative;
         z-index: 2;
     }
+
     .top__title {
         font-size: 18px;
     }
+
     .top__img {
         left: 180px;
     }
+
     .top__img-l {
         width: 185px;
         position: relative;
         z-index: 1;
     }
+
     .top__text {
         font-size: 10px;
     }
-}
 
-/* about */
-.about {
-    padding: 50px 0 108px;
-    background-color: #A5978E;
-    color: #FAFAFA;
-    font-weight: 400;
-}
-.container-about {
-    position: relative;
-}
-.about__inner {
-    display: flex;
-    gap: 20px;
-}
-.about__textbox {
-    width: 371px;
-    padding: 78px 0;
-}
-.about__title {
-    font-family: 'YesevaOne-Regular', cursive;
-    font-size: 40px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-.about__text {
-    margin-bottom: 10px;
-    font-weight: 400;
-}
-.about__content {
-    position: absolute;
-    left: 370px;
-}
-.about__content-text {
-    font-size: 11px;
-}
-.about__content-wrapper {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-    padding-bottom: 48px;
-    padding-left: 90px;
-}
-.about__content-img {
-    max-width: none;
-}
-.about__content-text {
-    padding-top: 10px;
-}
-.about__content-decoration {
-    display: flex;
-    align-items: center;
-}
-.about__content-decoration img {
-    margin-top: -10px;
-}
-.line {
-    flex-grow: 1; /* Полоса занимает оставшееся пространство */
-    height: 1px; /* Высота линии */
-    background-color: #7B6152; /* Цвет линии */
+    .about {
+        padding: 25px 0 10px;
+    }
 
+    .about__content {
+        min-width: 233px;
+    }
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .about__text {
+        font-size: 8px;
+        margin-bottom: 10px;
+    }
 }
