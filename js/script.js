@@ -10,22 +10,28 @@ menuButtonElement.addEventListener('click', function () {
     menuListElement.classList.toggle('menu--open')
 })
 
+let currentSlideIndex = 0
+
 init()
 
 function init() {
-    closeAllSlides()
-    const slideToShow = feedbackSlides[0]
-    slideToShow.classList.remove('hidden')
+    showSlideAndControl(0)
 }
+
+function showSlideAndControl(index) {
+    closeAllSlides()
+    feedbackSlides[index].classList.remove('hidden')
+
+    sliderControlsCollection.forEach((control) => control.classList.remove('active'))
+    sliderControlsCollection[index].classList.add('active')
+
+    currentSlideIndex = index + 1 % feedbackSlides.length
+} 
+
 
 sliderControlsCollection.forEach((contolEl) => {
     contolEl.addEventListener('click', function (event) {
-        feedbackSlides[event.currentTarget.dataset.control].classList.remove('hidden')
-        sliderControlsCollection.forEach((el) => el.classList.remove('brown'))
-        contolEl.classList.add('brown')
-        
-        closeAllSlides()
-        feedbackSlides[event.target.dataset.control].classList.remove('hidden')
+        showSlideAndControl(event.target.dataset.control)
     })
 })
 
@@ -41,12 +47,7 @@ function switchSlide(event) {
         if (!targetSlide || idx === -1) return
 
         const nextIdx = (idx + 1) % feedbackSlides.length
-        closeAllSlides()
-        feedbackSlides[nextIdx].classList.remove('hidden')
-
-        const nextControlBtn = sliderControlsCollection[nextIdx]
-        sliderControlsCollection.forEach((el) => el.classList.remove('brown'))
-        nextControlBtn.classList.add('brown')
+        showSlideAndControl(nextIdx)
 }
 
 
